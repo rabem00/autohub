@@ -48,10 +48,9 @@ class HubResourceUpload(ApiResource):
             input_status = json.load(data_file)
         data_file.close()
 
-        input_status["maps"].append({ "id": "3", "name": name, "type": selecttype, "email": email, "keyword": textlist, "detail": { "description": "Chef script ", "uploaddate": "10/1/2015", "lastmod": "11/10/2016", "link": "http://147.181.7.145/root/was" } })
+        input_status["maps"].append({ "id": "3", "name": name, "type": selecttype, "email": email, "keyword": textlist, "detail": { "description": "Chef script ", "uploaddate": "18/11/2016", "lastmod": "18/11/2016", "link": "http://147.181.7.145/root/marco" } })
 
         with open('./testdata.json','w') as data_file:
             json.dump(input_status, data_file)
-
-
+        data_file.close()
         return redirect('/')
