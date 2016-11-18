@@ -8,7 +8,7 @@
                         "description": "atomic ansible example",
                         "uploaddate": "10/12/2016",
                         "lastmod": "11/12/2016",
-                        "link": "http://dummy0"
+                        "link": "http://147.181.7.145/root/atomic.git"
                 }
         }, {
                 "id": "1",
@@ -20,7 +20,7 @@
                         "description": "Open enterprise puppet trump tower example",
                         "uploaddate": "10/12/2016",
                         "lastmod": "11/12/2016",
-                        "link": "http://dummy"
+                        "link": "http://147.181.7.145/root/trump.git"
                 }
         }, {
                 "id": "2",
@@ -32,7 +32,7 @@
                         "description": "Chef script ",
                         "uploaddate": "10/1/2015",
                         "lastmod": "11/10/2016",
-                        "link": "http://dummy"
+                        "link": "http://147.181.7.145/root/was.git"
                 }
         }]
 }
