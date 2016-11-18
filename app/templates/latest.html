@@ -17,31 +17,21 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Playbook Name</th>
+        <th>Name</th>
         <th>Type</th>
         <th>Uploader Email</th>
         <th>Keywords</th>
       </tr>
     </thead>
     <tbody>
-      <tr class='clickable-row' data-href='url://linkid0001/'>
-        <a><td>OpenShift Origin v1</td></a>
-        <td>Ansible</td>
-        <td>john@example.com</td>
-        <td>firewall</td>
-      </tr>
-      <tr class='clickable-row' data-href='url://linkid0002/'>
-        <td>Apache v1</td>
-        <td>Salt</td>
-        <td>mary@example.com</td>
-        <td>firewall</td>
-      </tr>
-      <tr class='clickable-row' data-href='url://linkid0003/'>
-        <td>Nginx</td>
-        <td>Puppet</td>
-        <td>july@example.com</td>
-        <td>firewall</td>
-      </tr>
+    {% for item in data['maps'] %}
+        <tr class='clickable-row' data-href='url://linkid0003/'>
+        <td>{{ item.name }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.keyword }}</td>
+        </tr>
+    {% endfor %}
     </tbody>
   </table>
 </div>

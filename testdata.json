@@ -1,15 +1,38 @@
-{
-   "pgmap":0,
-   "dc2":{
-      "num_in_dev":1200,
-			"num_in_test":100,
-			"num_in_acc":5,
-			"num_in_prod":200
-   },
-	 "dmz":{
-		 "num_in_dev":600,
-		 "num_in_test":20,
-		 "num_in_acc":6,
-		 "num_in_prod":99
-	 }
+{"maps": [{
+                "id": "0000",
+                "name": "atom",
+                "type": "ansible",
+                "email": "zomar@iemand.nl",
+                "keyword": "atomic, config",
+                "detail": {
+                        "description": "blabla",
+                        "uploaddate": "10/12/2016",
+                        "lastmod": "11/12/2016",
+                        "link": "http://dummy0"
+                }
+        }, {
+                "id": "0001",
+                "name": "open",
+                "type": "puppet",
+                "email": "puppy@iemand.nl",
+                "keyword": "open, install",
+                "detail": {
+                        "description": "blabla2",
+                        "uploaddate": "10/12/2016",
+                        "lastmod": "11/12/2016",
+                        "link": "http://dummy"
+                }
+        }, {
+                "id": "0002",
+                "name": "None",
+                "type": "None",
+                "email": "None",
+                "keyword": "None",
+                "detail": {
+                        "description": "blabla",
+                        "uploaddate": "10/12/2016",
+                        "lastmod": "11/12/2016",
+                        "link": "http://dummy"
+                }
+        }]
 }
