@@ -1,5 +1,5 @@
 {"maps": [{
-                "id": "0000",
+                "id": "0",
                 "name": "atom",
                 "type": "ansible",
                 "email": "zomar@iemand.nl",
@@ -11,7 +11,7 @@
                         "link": "http://dummy0"
                 }
         }, {
-                "id": "0001",
+                "id": "1",
                 "name": "open",
                 "type": "puppet",
                 "email": "puppy@iemand.nl",
@@ -23,7 +23,7 @@
                         "link": "http://dummy"
                 }
         }, {
-                "id": "0002",
+                "id": "2",
                 "name": "None",
                 "type": "None",
                 "email": "None",

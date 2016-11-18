@@ -9,7 +9,6 @@ from flask import abort
 from flask import jsonify
 from flask import current_app
 from flask.views import MethodView
-
 from app.base import ApiResource
 
 class HubResource(ApiResource):
@@ -30,10 +29,15 @@ class HubResource(ApiResource):
         self.config = current_app.config['USER_CONFIG']
 
     def get(self):
-        with open('./testdata.json') as data_file:
-            cluster_status = json.load(data_file)
-            #print json.dumps(cluster_status, ensure_ascii=False)
-        if request.mimetype == 'application/json':
-            return jsonify(cluster_status)
+        if not (request.args.get('id') == None):
+            id = request.args.get('id')
+            with open('./testdata.json') as data_file:
+                input_status = json.load(data_file)
+            return render_template('details.html', data=input_status, id=id, config=self.config)
         else:
-            return render_template('latest.html', data=cluster_status, config=self.config)
+            with open('./testdata.json') as data_file:
+                input_status = json.load(data_file)
+            if request.mimetype == 'application/json':
+                return jsonify(cluster_status)
+            else:
+                return render_template('latest.html', data=input_status, config=self.config)
