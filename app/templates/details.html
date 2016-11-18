@@ -35,6 +35,11 @@
     </tbody>
   </table>
 </div>
+<br>
+<div class=col-md6>
+<a href="{{ url_for('hub.index', _external=True)}}" class="btn btn-default">Latest</a>
+<a href="{{ url_for('hub.index', _external=True)}}out/post" class="btn btn-default">Upload Item</a>
+</div>
 </div>
 
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>

@@ -38,6 +38,6 @@ class HubResource(ApiResource):
             with open('./testdata.json') as data_file:
                 input_status = json.load(data_file)
             if request.mimetype == 'application/json':
-                return jsonify(cluster_status)
+                return jsonify(input_status)
             else:
                 return render_template('latest.html', data=input_status, config=self.config)

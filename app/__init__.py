@@ -8,6 +8,7 @@ from os.path import join
 from flask import Flask
 
 from app.hub.views import HubResource
+from app.hubupload.views import HubResourceUpload
 
 app = Flask(__name__)
 app.template_folder = join(dirname(__file__), 'templates')
@@ -36,3 +37,4 @@ app.config['USER_CONFIG'] = UserConfig()
 
 # Load all the blueprint endpoints
 app.register_blueprint(HubResource.as_blueprint())
+app.register_blueprint(HubResourceUpload.as_blueprint())
