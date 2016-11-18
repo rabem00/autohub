@@ -5,33 +5,33 @@
                 "email": "zomar@iemand.nl",
                 "keyword": "atomic, config",
                 "detail": {
-                        "description": "blabla",
+                        "description": "atomic ansible example",
                         "uploaddate": "10/12/2016",
                         "lastmod": "11/12/2016",
                         "link": "http://dummy0"
                 }
         }, {
                 "id": "1",
-                "name": "open",
+                "name": "open enterprise",
                 "type": "puppet",
-                "email": "puppy@iemand.nl",
+                "email": "puppy@dog.nl",
                 "keyword": "open, install",
                 "detail": {
-                        "description": "blabla2",
+                        "description": "open enterprise puppet example",
                         "uploaddate": "10/12/2016",
                         "lastmod": "11/12/2016",
                         "link": "http://dummy"
                 }
         }, {
                 "id": "2",
-                "name": "None",
+                "name": "was",
                 "type": "None",
-                "email": "None",
-                "keyword": "None",
+                "email": "was@machine.nl",
+                "keyword": "chef, machine",
                 "detail": {
-                        "description": "blabla",
-                        "uploaddate": "10/12/2016",
-                        "lastmod": "11/12/2016",
+                        "description": "Chef script ",
+                        "uploaddate": "10/1/2015",
+                        "lastmod": "11/10/2016",
                         "link": "http://dummy"
                 }
         }]
