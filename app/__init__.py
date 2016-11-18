@@ -7,7 +7,6 @@ from os.path import dirname
 from os.path import join
 from flask import Flask
 
-from app.dashboard.views import DashboardResource
 from app.hub.views import HubResource
 
 app = Flask(__name__)

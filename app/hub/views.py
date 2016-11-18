@@ -18,10 +18,10 @@ class HubResource(ApiResource):
     """
 
     endpoint = 'hub'
-    url_prefix = '/hub'
+    url_prefix = '/'
     url_rules = {
         'index': {
-            'rule': '/latest',
+            'rule': '/',
         }
     }
 
