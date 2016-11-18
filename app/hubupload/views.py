@@ -44,11 +44,14 @@ class HubResourceUpload(ApiResource):
         textlist=request.form['textlist']
         inputfile=request.form['inputfile']
 
-        print name
-        print email
-        print selecttype
-        print textlist
-        print inputfile
+        with open('./testdata.json','rw') as data_file:
+            input_status = json.load(data_file)
+        data_file.close()
+
+        input_status["maps"].append({ "id": "3", "name": name, "type": selecttype, "email": email, "keyword": textlist, "detail": { "description": "Chef script ", "uploaddate": "10/1/2015", "lastmod": "11/10/2016", "link": "http://147.181.7.145/root/was" } })
+
+        with open('./testdata.json','w') as data_file:
+            json.dump(input_status, data_file)
 
 
         return redirect('/')
