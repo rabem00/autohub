@@ -36,5 +36,4 @@ class UserConfig(dict):
 app.config['USER_CONFIG'] = UserConfig()
 
 # Load all the blueprint endpoints
-app.register_blueprint(DashboardResource.as_blueprint())
 app.register_blueprint(HubResource.as_blueprint())
