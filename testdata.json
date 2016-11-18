@@ -1,6 +1,6 @@
 {"maps": [{
                 "id": "0",
-                "name": "atom",
+                "name": "Atomic",
                 "type": "ansible",
                 "email": "zomar@iemand.nl",
                 "keyword": "atomic, config",
@@ -12,20 +12,20 @@
                 }
         }, {
                 "id": "1",
-                "name": "open enterprise",
+                "name": "Trump",
                 "type": "puppet",
-                "email": "puppy@dog.nl",
-                "keyword": "open, install",
+                "email": "trump@tower.nl",
+                "keyword": "open, wall",
                 "detail": {
-                        "description": "open enterprise puppet example",
+                        "description": "Open enterprise puppet trump tower example",
                         "uploaddate": "10/12/2016",
                         "lastmod": "11/12/2016",
                         "link": "http://dummy"
                 }
         }, {
                 "id": "2",
-                "name": "was",
-                "type": "None",
+                "name": "WAS",
+                "type": "chef",
                 "email": "was@machine.nl",
                 "keyword": "chef, machine",
                 "detail": {
