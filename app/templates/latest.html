@@ -43,9 +43,10 @@
         </div>
         <div id="main-wrapper" class="col-md-11 pull-right">
             <div id="main">
-              <br><br>
+              <br>
               <p>Select one of the playbooks for further details and a download link of the automation script:</p>
-                {% for item in data['maps'] %}
+              <br>
+              {% for item in data['maps'] %}
                 <div class="panel panel-primary">
                   <div class="panel-heading">
                     <h1 class="panel-title">
@@ -58,7 +59,7 @@
                     {{ item.type }}
                   </div>
                 </div>
-                {% endfor %}
+              {% endfor %}
             </div>
         </div>
             <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
