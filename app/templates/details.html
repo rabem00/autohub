@@ -10,41 +10,68 @@
 </head>
 <body>
 
-<div class="container">
-  <h2>Automation Hub - Details</h2>
-  <div class="table-responsive">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Description</th>
-        <th>Upload date</th>
-        <th>Modify date</th>
-        <th>GIT Link</th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for item in data['maps'] %}
-      {% if item.id == id %}
-          <td>{{ item.detail.description }}</td>
-          <td>{{ item.detail.uploaddate }}</td>
-          <td>{{ item.detail.lastmod }}</td>
-          <td><a href="{{ item.detail.link }}/tree/master">{{ item.detail.link }}</a></td>
-        </tr>
-      {% endif %}
-    {% endfor %}
-    </tbody>
-  </table>
-</div>
-<br>
-<div class=col-md6>
-<a href="{{ url_for('hub.index', _external=True)}}" class="btn btn-default">Latest</a>
-<a href="{{ url_for('hub.index', _external=True)}}out/post" class="btn btn-default">Upload Item</a>
-</div>
-</div>
+  <div id="header" class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="icon-reorder"></i>
+          </button>
+          <a class="navbar-brand" href="{{ url_for('hub.index', _external=True)}}">
+              Automation Hub
+          </a>
+      </div>
+      <nav class="collapse navbar-collapse">
 
-<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/hub.js') }}"></script>
+          <ul class="nav navbar-nav pull-right">
+              <li class="dropdown">
+                  <a href="#" id="nbAcctDD" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>Username<i class="icon-sort-down"></i></a>
+                  <ul class="dropdown-menu pull-right">
+                      <li><a href="#">Log Out</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </nav>
+  </div>
+<div id="wrapper">
+  <div id="sidebar-wrapper" class="col-md-1">
+            <div id="sidebar">
+                <ul class="nav list-group">
+                    <li>
+                        <a class="list-group-item" href="{{ url_for('hub.index', _external=True)}}out/post"><i class="icon-home icon-1x"></i>Upload Item</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main-wrapper" class="col-md-11 pull-right">
+          <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Upload date</th>
+                <th>Modify date</th>
+                <th>GIT Link</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for item in data['maps'] %}
+              {% if item.id == id %}
+                  <td>{{ item.detail.description }}</td>
+                  <td>{{ item.detail.uploaddate }}</td>
+                  <td>{{ item.detail.lastmod }}</td>
+                  <td><a href="{{ item.detail.link }}/tree/master">{{ item.detail.link }}</a></td>
+                </tr>
+              {% endif %}
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        </div>
 
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/hub.js') }}"></script>
+              </div>
+        </div>
+  </div>
 </body>
 </html>
