@@ -47,12 +47,12 @@
               <br>
               <form method="post" action="{{ url_for('hub.index', _external=True)}}out/post">
                 <div class="form-group">
-                  <label for="yourname">Please enter your name:</label>
-                  <input type="text" name="yourname" class="form-control" /><br />
+                  <label for="scriptname">Please enter the name of the script:</label>
+                  <input type="text" name="scriptname" class="form-control" /><br />
                 </div>
                 <div class="form-group">
-                  <label for="youremail">Please enter your email:</label>
-                  <input type="text" name="youremail" class="form-control" /><br />
+                  <label for="description">Please enter description:</label>
+                  <input type="text" name="description" class="form-control" /><br />
                 </div>
                 <div class="form-group">
                   <label for="selecttype">Select Automation Type</label>
@@ -62,10 +62,10 @@
                     <option>Chef</option>
                     <option>Puppet</option>
                   </select>
-                </div>
+                </div><br>
                 <div class="form-group">
-                  <label for="textlist">Keywords (comma)</label>
-                  <textarea class="form-control" name="textlist" rows="1"></textarea>
+                  <label for="keywordlist">Keywords (comma)</label>
+                  <textarea class="form-control" name="keywordlist" rows="1"></textarea>
                 </div>
                 <div class="form-group">
                   <label for="inputfile">File input</label>

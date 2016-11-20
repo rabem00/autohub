@@ -38,17 +38,17 @@ class HubResourceUpload(ApiResource):
             return render_template('upload.html', data=input_status, config=self.config)
 
     def post(post):
-        name=request.form['yourname']
-        email=request.form['youremail']
+        name=request.form['scriptname']
+        description=request.form['description']
         selecttype=request.form['selecttype']
-        textlist=request.form['textlist']
+        keywordlist=request.form['keywordlist']
         inputfile=request.form['inputfile']
 
         with open('./testdata.json','rw') as data_file:
             input_status = json.load(data_file)
         data_file.close()
 
-        input_status["maps"].append({ "id": "3", "name": name, "type": selecttype, "email": email, "keyword": textlist, "detail": { "description": "Chef script ", "uploaddate": "18/11/2016", "lastmod": "18/11/2016", "link": "http://147.181.7.145/root/marco" } })
+        input_status["maps"].append({ "id": "3", "name": name, "type": selecttype, "email": "get from user", "keyword": keywordlist, "detail": { "description": description, "uploaddate": "18/11/2016", "lastmod": "18/11/2016", "link": "http://147.181.7.145/root/marco" } })
 
         with open('./testdata.json','w') as data_file:
             json.dump(input_status, data_file)
