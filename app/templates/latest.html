@@ -44,19 +44,28 @@
         <div id="main-wrapper" class="col-md-11 pull-right">
             <div id="main">
               <br>
-              <p>Select one of the playbooks for further details and a download link of the automation script:</p>
               <br>
               {% for item in data['maps'] %}
                 <div class="panel panel-primary">
                   <div class="panel-heading">
                     <h1 class="panel-title">
-                      <a href="{{ url_for('hub.index', _external=True, id=item.id)}}">{{ item.name }}</a>
+                      {{ item.name }}
                     </h1>
                   </div>
                   <div class="panel-body">
-                    {{ item.email }}
-                    {{ item.keyword }}
-                    {{ item.type }}
+                    <div class="col-md-3 pull-left">
+                    Uploader: {{ item.email }} <br>
+                    Keywords: {{ item.keyword }} <br>
+                    Type: {{ item.type }}
+                  </div>
+                  <div class="col-md-4 pull-left">
+                    Description: {{ item.detail.description }}
+                  </div>
+                    <div class="col-md-4 pull-left">
+                    Git Link: <a href="{{ item.detail.link }}/tree/master">{{ item.detail.link }}</a><br>
+                    Upload date: {{ item.detail.uploaddate }} <br>
+                    Modify date: {{ item.detail.lastmod }}
+                    </div>
                   </div>
                 </div>
               {% endfor %}
