@@ -1,5 +1,5 @@
 # DashOPS and Automation Hub
-A flask and bootstrap project for OPS dashboard and an Automation Hub.
+### A flask and bootstrap project for OPS dashboard and an Automation Hub.
 ==================================================
 
 Quickstart
@@ -11,7 +11,7 @@ Quickstart
 4. point your browser to http://yourip:5000/
 5. enjoy!
 
-**If you want to change the port number:**
+### If you want to change the port number:**
 
 The development server of DashOPS runs by default on port 5000. Change the following line in `dashops.py` if you want to run on another port:
 ```python
@@ -24,17 +24,17 @@ app.run(host='0.0.0.0', port=8080, debug=True)
 Please keep in mind that the development server should not be used in a production environment!<br>
 DashOPS should be deployed into a proper webserver like for instance Nginx.
 
-Dashboard
+### Dashboard
 ---------
 
 Go to the DashOPS address via a browser, you will see the web frontend. This will inform you on a single page about all important things of your cluster(s).
 
-REST Api
+### REST Api
 --------
 
 If you access the address via commandline tools or programming languages, use ```content-type: application/json``` and you will get all the information as a json output.
 
-Deployment
+### Deployment
 ----------
 
 You may want to deploy this wsgi application into a real webserver like for instance nginx.<br>
@@ -44,7 +44,7 @@ You can edit the config.json file to configure how to talk to the cluster(s) in 
 
  TODO: app config items add.
 
-Setup server
+### Setup server
 ----------
 
 Install a CentOS 7 machine and update as usual. Install these requirements:
